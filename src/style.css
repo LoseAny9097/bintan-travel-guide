@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-bintan-blue text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-600 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-300 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+  
+  .timeline-item {
+    @apply relative pl-8 pb-8 border-l-2 border-gray-200;
+  }
+  
+  .timeline-item::before {
+    @apply absolute left-0 top-0 w-4 h-4 bg-bintan-blue rounded-full transform -translate-x-2;
+    content: '';
+  }
+  
+  .timeline-item.active::before {
+    @apply bg-bintan-coral animate-pulse-slow;
+  }
+  
+  .voice-btn {
+    @apply inline-flex items-center justify-center w-8 h-8 bg-bintan-green text-white rounded-full hover:bg-green-600 transition-colors duration-200;
+  }
+  
+  .gps-btn {
+    @apply inline-flex items-center px-3 py-1 bg-bintan-sand text-white text-sm rounded-full hover:bg-yellow-500 transition-colors duration-200;
+  }
+}
